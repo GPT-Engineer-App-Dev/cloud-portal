@@ -1,4 +1,4 @@
-import { Box, Flex, Text, VStack, Heading, Image } from '@chakra-ui/react';
+import { Box, Flex, Text, VStack, Heading, Image, Button } from '@chakra-ui/react';
 
 const AboutUs = () => {
   return (
