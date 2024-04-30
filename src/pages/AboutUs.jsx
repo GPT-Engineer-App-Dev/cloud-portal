@@ -1,13 +1,15 @@
 import { Box, Flex, Text, VStack, Heading, Image, Button } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 
 const AboutUs = () => {
+  const navigate = useNavigate();
   return (
     <Box>
       <Flex as="nav" bg="gray.100" p={4} align="center">
         <Heading size="md" ml={5}>GPT Engineer</Heading>
-        <Button mr={5} onClick={() => console.log('Navigate to features')}>Features</Button>
-        <Button mr={5} onClick={() => console.log('Navigate to testimonials')}>Testimonials</Button>
-        <Button mr={5} onClick={() => console.log('Navigate to contact')}>Contact Us</Button>
+        <Button mr={5} onClick={() => navigate('/features')}>Features</Button>
+        <Button mr={5} onClick={() => navigate('/testimonials')}>Testimonials</Button>
+        <Button mr={5} onClick={() => navigate('/contact')}>Contact Us</Button>
       </Flex>
       <VStack spacing={10} py={20}>
         <Heading as="h1" size="2xl" textAlign="center">About Us</Heading>

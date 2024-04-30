@@ -1,15 +1,17 @@
 import { Box, Flex, Text, Button, VStack, Heading, Container, Spacer } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 
 const Index = () => {
+  const navigate = useNavigate();
   return (
     <Box>
       <Flex as="nav" bg="gray.100" p={4} align="center">
         <Heading size="md" ml={5}>GPT Engineer</Heading>
         <Spacer />
-        <Button mr={5} onClick={() => console.log('Navigate to features')}>Features</Button>
-        <Button mr={5} onClick={() => console.log('Navigate to testimonials')}>Testimonials</Button>
-        <Button mr={5} onClick={() => console.log('Navigate to contact')}>Contact Us</Button>
+        <Button mr={5} onClick={() => navigate('/features')}>Features</Button>
+        <Button mr={5} onClick={() => navigate('/testimonials')}>Testimonials</Button>
+        <Button mr={5} onClick={() => navigate('/contact')}>Contact Us</Button>
       </Flex>
       <Container maxW="container.xl" centerContent>
         <VStack spacing={10} py={20}>
